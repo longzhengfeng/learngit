@@ -1,0 +1,50 @@
+一、Git使用
+
+1、有了gitlab账号后,下载git工具，选项均可默认安装
+
+2、Gitlab配置ssh连接
+
+a】、ssh密钥生成和连接
+打开Git Bash终端，输入 ssh-keygen -t rsa -C "humeng@hotpu.cn" 回车，
+文件名默认可不填直接回车，两次输入密钥回车,最后提示生成一对密钥 
+b】、添加公密钥
+文件C:\Users\Administrator\.ssh\id_rsa.pub用记事本打开，复制内容到网页上“Add SSH Key”剪贴板
+c】、连接测试
+终端输入 ssh -T git@"你的gitlab服务器地址"
+第一次连接时，会询问是否信任主机，确认后输入yes。如果看到Welcome to GitLab, Rusher!配置成功！
+
+
+登录
+ssh -T git@gitlab.hotpu.cn
+进入本地仓库
+ls #查看当前目录
+cd #进入下级目录
+查看状态
+git status
+查看日志
+git log
+查看配置
+git config --list
+
+查看分支
+git branch -a
+进入其他分支 //若不是当前的分支需要先pull远程分支,再push本地的分支
+git checkout test #切换到test分支 
+
+
+同步删除文件
+git rm -rf [文件名]
+git commit -m "delete [文件名]"
+git push   //配置简单push :修改 ./git/config中url = git@gitlab.hotpu.cn:humeng/kefu-handbook.git
+
+
+
+同步更新文件
+git add [文件名]
+git commit -m "update [文件名]"
+git push   //配置用户名和密码免输入
+
+标记版本
+git tag -a v2.0.0 -m "version 2.0.0"
+git push origin v2.0.0
+

@@ -31,7 +31,8 @@ git学习:
    --要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
    --用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别：
 
- □ 添加远程库
+ □ 添加远程库,上传文件
+   注意：在上传文件的时候，因为多人使用同一个远程库，所以需要先将服务器上的内容先：git pull下，然后再上传。
    --先要在github上创建一个远程库：登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库。
    --在Repository name填入learngit，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库：
    --要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
@@ -74,6 +75,8 @@ git学习:
 
 
     https://github.com/longzhengfeng/learngit.git
+    
+    
 
 
 
